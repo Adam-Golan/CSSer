@@ -1,52 +1,37 @@
 @use "./base/variables/medias.scss" as *;
-// Base colours vars.
-// Will be replaced in light/dark modes.
-// Each colour will become CSS variable, with three levels of transparency and a shdow.
-// Example:
-// var(--bg);
-// var(--bgShadow);
-// var(--trans-bg-high);
-// var(--trans-color-medium);
-// Text colour.
+
+// Colour Schemes.
 $color: #353b48;
-// Backgrounds colour.
 $bg: #f5f6fa;
 
-// Custom colour vars.
-// Each colour will become CSS variable, with five levels of brightness and darkness.
-// Example:
-// var(--green);
-// var(--green-l-3);
-// var(--green-d-5);
+// Custom Colours.
 $customColors: (
   "green": #6db966,
 );
 
+// Font.
 $font: "Arial", sans-serif;
 
 // Responsive sizes.
-// Each key name you put will become CSS varibale.
-// Example:
-// var(--fontSize);
 $screens: (
+  // 320
   $xs: (
-    // 320
     fontSize: 13px,
   ),
+  // 540
   $sm: (
-    // 540
   ),
+  // 720
   $md: (
-    // 720
   ),
+  // 960
   $lg: (
-    // 960
   ),
+  // 1140
   $xl: (
-    // 1140
   ),
+  // 1299
   $xxl: (
-    // 1299
   ),
 );
 
