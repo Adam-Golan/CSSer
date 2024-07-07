@@ -49,9 +49,9 @@
   &::-webkit-scrollbar-track {
     background: var(--trans-color-medium);
   }
-  [data-type="page"],
-  [data-type="module"],
-  [data-type="component"] {
+  [data-type=page],
+  [data-type=module],
+  [data-type=component] {
     display: block;
   }
 }
