@@ -4,7 +4,7 @@
 1. Run `npm run watch:scss`
 
 ### Configuration
-You can edit [config.scss](./config.scss) in order to determine variables for your app and configure it.
+You can edit [config.scss](./config.scss) in order to determine variables for your app and configure it.<br>
 ***Sections***:
 1. Colour Schemes - Here you'll determine your app's color and background-color. 
 Note that both properties will replace each other in dark mode.
