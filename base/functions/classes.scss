@@ -1,0 +1,46 @@
+@use "../../base/variables/pkg.scss" as *;
+
+// Margins & Paddings.
+@mixin createWhiteSpace() {
+  $spaces: "margin", "padding";
+  @each $space in $spaces {
+    @for $i from 1 through 6 {
+      $value: $i * 5;
+      @each $suffix, $pos in $posiotions {
+        #{"." + $space}-#{$suffix}-#{$value} {
+          #{""+$space}-#{$pos}: #{$value}px;
+        }
+      }
+    }
+  }
+}
+
+// Shadows.
+@mixin createShadows() {
+  $types: (
+    "t": "text-shadow",
+    "b": "box-shadow",
+  );
+  $sides: "t", "b", "l", "r";
+  @each $type, $prop in $types {
+    $var: if($type == "t", "color", "bg");
+    @for $i from 1 through 5 {
+      $value: $i * 10;
+      #{"." + $type}-shadow-#{$i} {
+        #{$prop}: 0px 0px #{$value}px var(--#{$var}Shadow);
+      }
+      @each $side in $sides {
+        $loc: "";
+        @if $side == "t" or $side == "b" {
+          $loc: 0px #{$value * if($side == "t", -1, 1)}px;
+        }
+        @if $side == "l" or $side == "r" {
+          $loc: #{$value * if($side == "l", -1, 1)}px 0px;
+        }
+        #{"." + $type}-shadow-#{$side}-#{$i} {
+          #{$prop}: #{$loc} #{$value}px var(--#{$var}Shadow);
+        }
+      }
+    }
+  }
+}

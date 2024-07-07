@@ -1,0 +1,64 @@
+@use "../config.scss" as *;
+@use "../base/variables/pkg.scss" as *;
+@use "../base/functions/pkg.scss" as *;
+
+:root {
+  // Main Colors.
+  @include baiscColors($base);
+  // Sizes.
+  @include screenSizeVars;
+  // UI Colors.
+  @include customColorMapper($ui-colors);
+  // Custom Colors.
+  @include customColorMapper($customColors);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--color);
+  font-size: var(--fontSize);
+  font-family: $font;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  &:not(input, textarea) {
+    user-select: none;
+  }
+  
+  &:focus {
+    &:not(a, button, input, textarea) {
+      outline: none;
+    }
+    &:is(a, button, input, textarea) {
+      outline: 2px solid var(--color);
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--trans-bg-low);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--trans-color-medium);
+  }
+  [data-type="page"],
+  [data-type="module"],
+  [data-type="component"] {
+    display: block;
+  }
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+}

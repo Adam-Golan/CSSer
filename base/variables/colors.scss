@@ -1,0 +1,31 @@
+@use "../../config.scss" as *;
+@use "./medias.scss" as *;
+@use "sass:list";
+
+// Base colours.
+$base: (
+  list.nth($modes, 1): (
+    "bg": $bg,
+    "color": $color,
+  ),
+  list.nth($modes, 2): (
+    "bg": $color,
+    "color": $bg,
+  ),
+);
+
+// Transparent Variations
+$trans: (
+  "low": 1,
+  "medium": 2,
+  "high": 4,
+);
+
+// UI-Colors
+$ui-colors: (
+  "success": #22bb33,
+  "danger": #bb2124,
+  "warning": #f0ad4e,
+  "info": #5bc0de,
+  "disabled": #aaaaaa,
+);

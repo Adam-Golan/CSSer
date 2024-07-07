@@ -1,0 +1,11 @@
+@use "./generators/index.gen.scss";
+
+// Your code - import via @use.
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

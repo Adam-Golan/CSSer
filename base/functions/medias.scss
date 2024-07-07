@@ -1,0 +1,11 @@
+@use '../../config.scss' as *;
+
+@mixin screenSizeVars {
+  @each $screen, $screenMap in $screens {
+    @media (min-width: $screen) {
+      @each $varName, $value in $screenMap {
+        --#{$varName}: #{$value};
+      }
+    }
+  }
+}
