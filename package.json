@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:scss": "sass --watch style.scss dist/style.css"
+    "watch:scss": "sass --watch style.scss dist/style.css",
+    "build:scss": "sass style.scss dist/style.css"
   },
   "author": "",
   "license": "ISC",
