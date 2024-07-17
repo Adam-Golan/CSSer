@@ -1,6 +1,7 @@
 @use "../config.scss" as *;
-@use "../base/variables/pkg.scss" as *;
-@use "../base/functions/pkg.scss" as *;
+@use "../base/variables/colors.scss" as *;
+@use '../base/functions/colors.scss' as *;
+@use '../base/functions/medias.scss' as *;
 
 :root {
   // Main Colors.

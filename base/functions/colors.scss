@@ -1,4 +1,4 @@
-@use "../../base/variables/pkg.scss" as *;
+@use "../../base/variables/colors.scss" as *;
 @use "sass:math";
 @use "sass:list";
 @use "sass:map";
@@ -6,35 +6,43 @@
 // Mapping Unpacking
 // // Color & Shadow from a map
 @mixin colorAndShadow($map) {
-  @each $key, $hex in $map {
-    --#{$key}: #{$hex};
-    --#{$key}Shadow: #{darken($hex, 20%)};
+  & {
+    @each $key, $hex in $map {
+      --#{$key}: #{$hex};
+      --#{$key}Shadow: #{darken($hex, 20%)};
+    }
   }
 }
 // // Color pahsing from a map
 @mixin colorPhase($sub-map) {
-  @each $key, $hex in $sub-map {
-    @each $name, $div in $trans {
-      --trans-#{$key}-#{$name}: #{rgba($hex, math.div(0.8, $div))};
+  & {
+    @each $key, $hex in $sub-map {
+      @each $name, $div in $trans {
+        --trans-#{$key}-#{$name}: #{rgba($hex, math.div(0.8, $div))};
+      }
     }
   }
 }
 // // Color-Scheme preferences from a map's nesting map
 @mixin baiscColors($map) {
-  @each $mode, $sub-map in $map {
-    @media (prefers-color-scheme: #{$mode}) {
-      @include colorAndShadow($sub-map);
-      @include colorPhase($sub-map);
+  & {
+    @each $mode, $sub-map in $map {
+      @media (prefers-color-scheme: #{$mode}) {
+        @include colorAndShadow($sub-map);
+        @include colorPhase($sub-map);
+      }
     }
   }
 }
 
 @mixin customColorMapper($map) {
-  @each $name, $hex in $map {
-    --#{""+$name}: #{$hex};
-    @for $i from 1 through 5 {
-      --#{""+$name}-d-#{$i}: #{darken($hex, $i * 5%)};
-      --#{""+$name}-l-#{$i}: #{lighten($hex, $i * 5%)};
+  & {
+    @each $name, $hex in $map {
+      --#{""+$name}: #{$hex};
+      @for $i from 1 through 5 {
+        --#{""+$name}-d-#{$i}: #{darken($hex, $i * 5%)};
+        --#{""+$name}-l-#{$i}: #{lighten($hex, $i * 5%)};
+      }
     }
   }
 }

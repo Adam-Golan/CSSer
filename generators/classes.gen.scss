@@ -1,5 +1,5 @@
-@use "../base/functions/pkg.scss" as *;
-@use "../config.scss" as *;
+@use '../config.scss' as *;
+@use '../base/functions/classes.scss' as *;
 
 @if $whiteSpaces {
     @include createWhiteSpace;
