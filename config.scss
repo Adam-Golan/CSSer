@@ -1,8 +1,8 @@
 @use "./base/variables/medias.scss" as *;
 
 // Colour Schemes.
-$color: #353b48;
-$bg: #f5f6fa;
+$color: #1A2931;
+$bg: #BAC6CB;
 
 // Custom Colours.
 $customColors: (
@@ -15,24 +15,44 @@ $font: "Arial", sans-serif;
 // Responsive sizes.
 $screens: (
   // 320
-  $xs: (
-    fontSize: 13px,
-  ),
-  // 540
-  $sm: (
-  ),
-  // 720
-  $md: (
-  ),
-  // 960
-  $lg: (
-  ),
-  // 1140
-  $xl: (
-  ),
-  // 1299
-  $xxl: (
-  ),
+  $smMobile:
+    (
+      fontSize: 12px,
+      layoutGap: 10px,
+      layoutPad: 10px,
+      stickyHeaderHeight: 60px,
+      heroHeight: 40vh,
+      modalClamp: clamp(280px, 50%, 320px),
+    ),
+  // 375
+  $mdMobile: (),
+  // 480
+  $lgMobile_smTablet:
+    (
+      fontSize: 14px,
+      layoutGap: 15px,
+      layoutPad: 15px,
+      heroHeight: 50vh,
+      modalClamp: clamp(350px, 50%, 480px),
+    ),
+  // 600
+  $mdTablet:
+    (
+      fontSize: 16px,
+    ),
+  // 1024
+  $lgTablet_smLaptop:
+    (
+      fontSize: 18px,
+      layoutGap: 20px,
+      layoutPad: 20px,
+      heroHeight: 70vh,
+      modalClamp: clamp(350px, 25%, 800px),
+    ),
+  // 1366
+  $laptop_smDesktop: (),
+  // 1920
+  $lgDesktop_TV: ()
 );
 
 // Class generators switches.
