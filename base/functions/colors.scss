@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "sass:list";
 @use "sass:map";
+@use "sass:color";
 
 // Mapping Unpacking
 // // Color & Shadow from a map
@@ -9,7 +10,7 @@
   & {
     @each $key, $hex in $map {
       --#{$key}: #{$hex};
-      --#{$key}Shadow: #{color.adjust($hex, $lightness: -20%)};
+      --#{$key}Shadow: #{color.adjust($hex, $blackness: 20%)};
     }
   }
 }
@@ -40,7 +41,7 @@
     @each $name, $hex in $map {
       --#{""+$name}: #{$hex};
       @for $i from 1 through 5 {
-        --#{""+$name}-d-#{$i}: #{color.adjust($hex, $lightness: $i * 5% * -1)};
+        --#{""+$name}-d-#{$i}: #{color.adjust($hex, $blackness: $i * 5%)};
         --#{""+$name}-l-#{$i}: #{color.adjust($hex, $lightness: $i * 5%)};
       }
     }
