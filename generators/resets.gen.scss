@@ -1,7 +1,7 @@
 @use "../config.scss" as *;
 @use "../base/variables/colors.scss" as *;
-@use '../base/functions/colors.scss' as *;
-@use '../base/functions/medias.scss' as *;
+@use "../base/functions/colors.scss" as *;
+@use "../base/functions/medias.scss" as *;
 
 :root {
   // Main Colors.
@@ -31,7 +31,7 @@
   &:not(input, textarea) {
     user-select: none;
   }
-  
+
   &:focus {
     &:not(a, button, input, textarea) {
       outline: none;
@@ -50,9 +50,14 @@
   &::-webkit-scrollbar-track {
     background: var(--trans-color-medium);
   }
-  [data-type=page],
-  [data-type=module],
-  [data-type=component] {
+  [data-type="page"] {
+    width: 100%;
+    height: 100%;
+    padding: var(--layoutPad);
+  }
+  [data-type="page"],
+  [data-type="module"],
+  [data-type="component"] {
     display: block;
   }
 }
