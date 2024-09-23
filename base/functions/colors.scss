@@ -9,7 +9,7 @@
   & {
     @each $key, $hex in $map {
       --#{$key}: #{$hex};
-      --#{$key}Shadow: #{darken($hex, 20%)};
+      --#{$key}Shadow: #{color.adjust($hex, $lightness: -20%)};
     }
   }
 }
@@ -40,8 +40,8 @@
     @each $name, $hex in $map {
       --#{""+$name}: #{$hex};
       @for $i from 1 through 5 {
-        --#{""+$name}-d-#{$i}: #{darken($hex, $i * 5%)};
-        --#{""+$name}-l-#{$i}: #{lighten($hex, $i * 5%)};
+        --#{""+$name}-d-#{$i}: #{color.adjust($hex, $lightness: $i * 5% * -1)};
+        --#{""+$name}-l-#{$i}: #{color.adjust($hex, $lightness: $i * 5%)};
       }
     }
   }
