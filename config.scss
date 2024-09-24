@@ -1,8 +1,10 @@
 @use "./base/variables/medias.scss" as *;
+@use "./base/variables/nativeConfigs/nativeConfigs.scss" as *;
+@use "sass:map";
 
 // Colour Schemes.
-$color: #1A2931;
-$bg: #BAC6CB;
+$color: #1a2931;
+$bg: #bac6cb;
 
 // Custom Colours.
 $customColors: (
@@ -13,16 +15,11 @@ $customColors: (
 $font: "Arial", sans-serif;
 
 // Responsive sizes.
-$screens: (
+$screens: map.deep-merge($nativeConfigs, (
   // 320
   $smMobile:
     (
       fontSize: 12px,
-      layoutGap: 10px,
-      layoutPad: 10px,
-      stickyHeaderHeight: 60px,
-      heroHeight: 40vh,
-      modalClamp: clamp(280px, 50%, 320px),
     ),
   // 375
   $mdMobile: (),
@@ -30,10 +27,6 @@ $screens: (
   $lgMobile_smTablet:
     (
       fontSize: 14px,
-      layoutGap: 15px,
-      layoutPad: 15px,
-      heroHeight: 50vh,
-      modalClamp: clamp(350px, 50%, 480px),
     ),
   // 600
   $mdTablet:
@@ -44,16 +37,12 @@ $screens: (
   $lgTablet_smLaptop:
     (
       fontSize: 18px,
-      layoutGap: 20px,
-      layoutPad: 20px,
-      heroHeight: 70vh,
-      modalClamp: clamp(350px, 25%, 800px),
     ),
   // 1366
   $laptop_smDesktop: (),
   // 1920
   $lgDesktop_TV: ()
-);
+));
 
 // Class generators switches.
 // Margins & Paddings.

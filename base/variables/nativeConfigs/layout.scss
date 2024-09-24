@@ -1,0 +1,16 @@
+@use '../medias.scss' as *;
+
+$layout: ( // Merged.
+  $smMobile: (
+    layoutGap: 10px,
+    layoutPad: 10px,
+  ),
+  $lgMobile_smTablet: (
+    layoutGap: 15px,
+    layoutPad: 15px,
+  ),
+  $lgTablet_smLaptop: (
+    layoutGap: 20px,
+    layoutPad: 20px,
+  ),
+);

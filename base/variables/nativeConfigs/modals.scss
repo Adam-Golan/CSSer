@@ -1,0 +1,13 @@
+@use "../medias.scss" as *;
+
+$modals: (
+  $smMobile: (
+    modalClamp: clamp(280px, 50%, 320px),
+  ),
+  $lgMobile_smTablet: (
+    modalClamp: clamp(350px, 50%, 480px),
+  ),
+  $lgTablet_smLaptop: (
+    modalClamp: clamp(350px, 25%, 800px),
+  )
+);

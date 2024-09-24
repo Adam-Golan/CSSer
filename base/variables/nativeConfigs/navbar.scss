@@ -1,0 +1,22 @@
+@use '../medias.scss' as *;
+
+$navbar: ( // Merged.
+    $smMobile:
+    (
+      navbarWidth: max-content,
+      navbarFlow: column,
+      navbarAlign: flex-start,
+      navbarShadow: none,
+      hamDisplay: block,
+      linkLeft: -100%,
+    ),
+    $lgMobile_smTablet:
+    (
+      navbarWidth: 100%,
+      navbarFlow: row,
+      navbarAlign: center,
+      navbarShadow: 0 0 10px 2px,
+      hamDisplay: none,
+      linkLeft: 0,
+    ),
+);

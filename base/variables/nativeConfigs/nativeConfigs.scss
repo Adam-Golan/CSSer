@@ -1,0 +1,12 @@
+@use "./layout.scss" as *;
+@use "./navbar.scss" as *;
+@use "./modals.scss" as *;
+@use "./hero.scss" as *;
+
+@use "sass:map";
+
+$nativeConfigs: ();
+$maps: $layout, $navbar, $modals, $hero;
+@each $map in $maps {
+  $nativeConfigs: map.deep-merge($nativeConfigs, $map);
+}

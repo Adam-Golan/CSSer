@@ -1,0 +1,13 @@
+@use "../medias.scss" as *;
+
+$hero: (
+  $smMobile: (
+    heroHeight: 40vh,
+  ),
+  $lgMobile_smTablet: (
+    heroHeight: 50vh,
+  ),
+  $lgTablet_smLaptop: (
+    heroHeight: 70vh,
+  ),
+);
