@@ -7,6 +7,7 @@ $navbar: (
       navbarDisplay: block,
       navbarHeight: 50px,
       navbarShadow: none,
+      navbarOverflow: hidden,
       hamDisplay: block,
       linkDisplay: block,
       linkLeft: -100%,
@@ -16,6 +17,7 @@ $navbar: (
   $lgMobile_smTablet: (
     navbarDisplay: flex,
     navbarShadow: 0 0 10px 2px,
+    navbarOverflow: visible,
     hamDisplay: none,
     linkDisplay: inline-block,
     linkLeft: 0,
