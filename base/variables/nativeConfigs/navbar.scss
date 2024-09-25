@@ -20,6 +20,9 @@ $navbar: (
     linkDisplay: inline-block,
     linkLeft: 0,
     linkPadding: var(--layoutPad) calc(var(--layoutPad) * 2),
-    linkSize: 1rem,
+    linkSize: 1.2rem,
+  ),
+  $lgTablet_smLaptop: (
+    linkPadding: calc(var(--layoutPad) / 2) var(--layoutPad),
   )
 );
