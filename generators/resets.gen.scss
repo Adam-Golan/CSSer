@@ -53,7 +53,7 @@
   [data-type="page"] {
     width: 100%;
     height: 100%;
-    padding-block: calc(var(--layoutPad) + 1rem);
+    padding-top: var(--navbarHeight);
   }
   [data-type="page"],
   [data-type="module"],
