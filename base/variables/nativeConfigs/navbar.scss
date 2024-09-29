@@ -16,6 +16,7 @@ $navbar: (
     ),
   $lgMobile_smTablet: (
     navbarDisplay: flex,
+    navbarHeight: calc(var(--linkSize) + var(--layoutPad) * 2),
     navbarShadow: 0 0 10px 2px,
     navbarOverflow: visible,
     hamDisplay: none,
@@ -25,6 +26,7 @@ $navbar: (
     linkSize: 1.2rem,
   ),
   $lgTablet_smLaptop: (
+    navbarHeight: calc(var(--linkSize) + var(--layoutPad)),
     linkPadding: calc(var(--layoutPad) / 2) var(--layoutPad),
   )
 );
