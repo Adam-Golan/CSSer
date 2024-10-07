@@ -1,0 +1,25 @@
+@use "../medias.scss" as *;
+
+$fluid: (
+    $smMobile: (
+        fluidMaxHeight: 300px,
+    ),
+    $mdMobile: (
+        fluidMaxHeight: 355px,
+    ),
+    $lgMobile_smTablet: (
+        fluidMaxHeight: 460px,
+    ),
+    $mdTablet: (
+        fluidMaxHeight: 580px,
+    ),
+    $lgTablet_smLaptop: (
+        fluidMaxHeight: 980px,
+    ),
+    $laptop_smDesktop: (
+        fluidMaxHeight: 1300px,
+    ),
+    $lgDesktop_TV: (
+        fluidMaxHeight: 1850px,
+    ),
+);
