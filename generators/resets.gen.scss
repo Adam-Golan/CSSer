@@ -28,8 +28,12 @@
   z-index: 0;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  &:not(input, textarea) {
-    user-select: none;
+  user-select: none;
+  input,
+  textarea,
+  samp,
+  code {
+    user-select: text;
   }
 
   &:focus {
