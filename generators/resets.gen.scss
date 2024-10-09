@@ -33,11 +33,12 @@
   input,
   textarea,
   samp,
-  code {
+  code, 
+  pre {
     user-select: text;
   }
 
-  code, samp {
+  code, samp, pre {
     padding: 2px 6px;
     border-radius: 4px;
     background: var(--color);
