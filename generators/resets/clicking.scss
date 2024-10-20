@@ -1,0 +1,34 @@
+@use "./mixins.scss" as *;
+
+@mixin clicking {
+  a,
+  button,
+  input [type="button"],
+  input [type="submit"],
+  input [type="reset"],
+  input [type="image"] {
+    display: inline-block;
+    @include interface(0.8rem);
+    border: none;
+    background: var(--color);
+    text-decoration: none;
+    color: var(--bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      background: var(--bg);
+      color: var(--color);
+      scale: 1.05;
+      box-shadow: 0 0 10px 5px var(--trans-color-medium);
+    }
+    &:active {
+      background: var(--color-d-3);
+      transform: scale(1.02);
+    }
+
+    &:disabled {
+      background-color: var(--disabled);
+      cursor: not-allowed;
+    }
+  }
+}

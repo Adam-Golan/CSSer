@@ -1,0 +1,30 @@
+@use "./mixins.scss" as *;
+
+@mixin copying {
+  code,
+  pre,
+  kbd,
+  samp,
+  var,
+  blockquote,
+  q,
+  tt,
+  output {
+    @include interface(0.4rem);
+    margin: 10px 0;
+    border-left: 4px solid var(--zima-d-5);
+    background: var(--color);
+    color: var(--bg);
+    user-select: text;
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+}
+
+blockquote {
+  font-style: italic;
+}
+
+q {
+  quotes: "“" "”";
+}

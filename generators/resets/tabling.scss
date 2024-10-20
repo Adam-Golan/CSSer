@@ -1,0 +1,21 @@
+@mixin tabling {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  caption {
+    caption-side: bottom;
+    padding: 5px;
+    font-style: italic;
+    text-align: center;
+  }
+}

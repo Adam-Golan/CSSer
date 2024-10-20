@@ -3,6 +3,13 @@
 @use "../base/functions/colors.scss" as *;
 @use "../base/functions/medias.scss" as *;
 
+@use "./resets/clicking.scss" as *;
+@use "./resets/copying.scss" as *;
+@use "./resets/writing.scss" as *;
+@use "./resets/headers.scss" as *;
+@use "./resets/listing.scss" as *;
+@use "./resets/tabling.scss" as *;
+
 :root {
   // Main Colors.
   @include baiscColors($base);
@@ -14,56 +21,17 @@
   @include customColorMapper($customColors);
 }
 
-* {
+html,
+body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  position: relative;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  color: var(--color);
-  font-size: var(--fontSize);
+  background: var(--bg);
+  line-height: 1.5;
   font-family: $font;
-  z-index: 0;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  scroll-behavior: smooth;
-  input,
-  textarea,
-  samp,
-  code, 
-  pre {
-    user-select: text;
-  }
-
-  code, samp, pre {
-    padding: 2px 6px;
-    border-radius: 4px;
-    background: var(--color);
-    color: var(--bg);
-    text-shadow: 0 0 15px;
-  }
-
-  &:focus {
-    &:not(a, button, input, textarea) {
-      outline: none;
-    }
-    &:is(a, button, input, textarea) {
-      outline: 2px solid var(--color);
-    }
-  }
-  &::-webkit-scrollbar {
-    width: 0.2rem;
-    height: 0.2rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--trans-bg-low);
-  }
-  &::-webkit-scrollbar-track {
-    background: var(--trans-color-medium);
-  }
+  font-size: var(--fontSize);
+  box-sizing: border-box;
   [data-type="page"] {
     width: 100%;
     height: 100%;
@@ -75,11 +43,36 @@
   [data-type="component"] {
     display: block;
   }
-}
+  * {
+    position: relative;
+    border: none;
+    outline: none;
+    color: var(--color);
+    text-decoration: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
 
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  background: var(--bg);
+    @include writing;
+    @include copying;
+    @include clicking;
+    @include headings;
+    @include listing;
+    @include tabling;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--trans-bg-low);
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--trans-color-medium);
+    }
+  }
 }

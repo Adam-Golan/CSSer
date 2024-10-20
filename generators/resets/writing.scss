@@ -1,0 +1,21 @@
+@use "./mixins.scss" as *;
+
+@mixin writing {
+  textarea,
+  input:not([type="button"]):not([type="submit"]):not([type="reset"]):not(
+      [type="image"]
+    ) {
+    @include interface(0.4rem);
+    margin-bottom: 15px;
+    border: 2px solid var(--color);
+    background: transparent;
+    user-select: text;
+    &:focus {
+      border-color: var(--zima);
+    }
+    &::placeholder {
+      color: #999;
+      font-size: 0.9rem;
+    }
+  }
+}
