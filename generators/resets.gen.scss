@@ -5,10 +5,10 @@
 
 @use "./resets/clicking.scss" as *;
 @use "./resets/copying.scss" as *;
-@use "./resets/writing.scss" as *;
-@use "./resets/headers.scss" as *;
+@use "./resets/heading.scss" as *;
 @use "./resets/listing.scss" as *;
 @use "./resets/tabling.scss" as *;
+@use "./resets/writing.scss" as *;
 
 :root {
   // Main Colors.
@@ -57,12 +57,12 @@ body {
       box-sizing: inherit;
     }
 
-    @include writing;
-    @include copying;
     @include clicking;
+    @include copying;
     @include headings;
     @include listing;
     @include tabling;
+    @include writing;
 
     &::-webkit-scrollbar {
       width: 0.2rem;
