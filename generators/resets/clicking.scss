@@ -31,4 +31,9 @@
       cursor: not-allowed;
     }
   }
+
+  form input[type="radio"],
+  form input[type="checkbox"] {
+    accent-color: var(--bg);;
+  }
 }
