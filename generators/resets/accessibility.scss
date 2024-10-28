@@ -1,0 +1,56 @@
+@mixin accessibility {
+  :root {
+    // HC = High Contrast.
+    --HC-color: #000;
+    --HC-bg: #f0f0f0;
+  }
+
+  &.high-contrast * {
+    color: var(--HC-color);
+    background: var(--HC-bg);
+  }
+
+  * {
+    &:focus {
+      outline: 2px solid var(--zima-d-4);
+      outline-offset: 2px;
+    }
+    :is(button:focus) {
+      background-color: var(--zima-d-4);
+      color: white;
+    }
+    :is(a.skip-link) {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background-color: #005fcc;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 100;
+      &:focus {
+        top: 10px;
+      }
+    }
+
+    &.sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}

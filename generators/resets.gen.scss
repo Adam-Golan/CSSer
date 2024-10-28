@@ -3,6 +3,7 @@
 @use "../base/functions/colors.scss" as *;
 @use "../base/functions/medias.scss" as *;
 
+@use "./resets/accessibility.scss" as *;
 @use "./resets/clicking.scss" as *;
 @use "./resets/copying.scss" as *;
 @use "./resets/heading.scss" as *;
@@ -32,6 +33,7 @@ body {
   font-family: $font;
   font-size: var(--fontSize);
   box-sizing: border-box;
+  @include accessibility;
 
   * {
     position: relative;
