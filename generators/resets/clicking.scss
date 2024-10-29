@@ -32,8 +32,10 @@
     }
   }
 
-  form input[type="radio"],
-  form input[type="checkbox"] {
-    accent-color: var(--bg);;
+  progress,
+  input[type="range"],
+  input[type="radio"],
+  input[type="checkbox"] {
+    accent-color: var(--bg);
   }
 }
