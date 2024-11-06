@@ -14,6 +14,17 @@ $base: (
   ),
 );
 
+$revert : (
+  list.nth($modes, 1): (
+    "bg": $color,
+    "color": $bg,
+  ),
+  list.nth($modes, 2): (
+    "bg": $bg,
+    "color": $color,
+  ),
+);
+
 // Transparent Variations
 $trans: (
   "low": 1,

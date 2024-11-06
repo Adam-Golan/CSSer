@@ -13,7 +13,10 @@
 
 :root {
   // Main Colors.
-  @include baiscColors($base);
+  @include basicColors($base);
+  .revert {
+    @include basicColors($revert);
+  }
   // Sizes.
   @include screenSizeVars;
   // UI Colors.

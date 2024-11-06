@@ -25,7 +25,7 @@
   }
 }
 // // Color-Scheme preferences from a map's nesting map
-@mixin baiscColors($map) {
+@mixin basicColors($map) {
   & {
     @each $mode, $sub-map in $map {
       @media (prefers-color-scheme: #{$mode}) {
