@@ -8,7 +8,6 @@
   var,
   blockquote,
   q,
-  tt,
   output {
     @include interface(0.4rem);
     margin: 10px 0;
@@ -20,6 +19,10 @@
     user-select: text;
     cursor: text;
   }
+}
+
+code {
+  display: inline-block;
 }
 
 blockquote {
