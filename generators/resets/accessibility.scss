@@ -12,11 +12,11 @@
 
   * {
     &:focus {
-      outline: 2px solid var(--zima-d-4);
-      outline-offset: 2px;
+      outline: 2px solid var(--zima-d-3);
+      outline-offset: 1px;
     }
     :is(button:focus) {
-      background-color: var(--zima-d-4);
+      background-color: var(--zima-d-3);
       color: white;
     }
     :is(a.skip-link) {
