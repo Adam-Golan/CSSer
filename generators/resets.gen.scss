@@ -8,6 +8,7 @@
 @use "./resets/copying.scss" as *;
 @use "./resets/heading.scss" as *;
 @use "./resets/listing.scss" as *;
+@use "./resets/pseudos.scss" as *;
 @use "./resets/tabling.scss" as *;
 @use "./resets/writing.scss" as *;
 
@@ -56,6 +57,7 @@ body {
     @include copying;
     @include headings;
     @include listing;
+    @include pseudos;
     @include tabling;
     @include writing;
 

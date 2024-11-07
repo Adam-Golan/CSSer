@@ -1,0 +1,41 @@
+@mixin pseudos {
+  .titled {
+    --local-bg: var(--trans-color-low);
+    --before-border: 8px;
+    &::before,
+    &::after {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.2s ease allow-discrete;
+    }
+    &::before {
+      content: attr(data-title);
+      width: max-content;
+      padding: calc(var(--before-border) / 2) 10px;
+      bottom: calc(100% + var(--before-border) * 2);
+      border-radius: var(--before-border);
+      background: var(--local-bg);
+      color: var(--bg);
+      font-size: 0.8rem;
+      text-align: center;
+      word-wrap: break-word;
+    }
+    &::after {
+      content: "";
+      bottom: calc(100% + var(--before-border));
+      border-left: var(--before-border) solid transparent;
+      border-right: var(--before-border) solid transparent;
+      border-top: var(--before-border) solid var(--local-bg);
+    }
+    &:hover {
+      &::before,
+      &::after {
+        display: initial;
+        opacity: 1;
+      }
+    }
+  }
+}
