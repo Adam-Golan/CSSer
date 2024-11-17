@@ -40,6 +40,8 @@ body {
   @include accessibility;
 
   * {
+    margin: 0;
+    padding: 0;
     position: relative;
     border: none;
     outline: none;
