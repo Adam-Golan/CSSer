@@ -4,29 +4,23 @@ $navbar: (
   // Merged.
   $smMobile:
     (
-      navbarDisplay: block,
-      navbarHeight: 50px,
+      navbarHeight: calc(var(--hamHeight) + calc(var(--hamMargin) * 2)),
       navbarShadow: none,
-      navbarOverflow: hidden,
-      hamDisplay: block,
+      navbarOverflow: visible,
+      linksDisplay: block,
+      linksLeft: -100%,
       linkDisplay: block,
-      linkLeft: -100%,
-      linkPadding: calc(var(--layoutPad) / 5) calc(var(--layoutPad) / 2),
-      linkSize: 2rem,
+      linkWidth: 100%,
+      hamHeight: calc(1rem * 2),
+      hamMargin: 0.75rem,
     ),
   $lgMobile_smTablet: (
-    navbarDisplay: flex,
-    navbarHeight: calc(var(--linkSize) + var(--layoutPad) * 2),
-    navbarShadow: 0 0 10px 2px,
+    navbarHeight: auto,
+    navbarShadow: 0 0 30px 6px var(--trans-color-low),
     navbarOverflow: visible,
-    hamDisplay: none,
-    linkDisplay: inline-block,
-    linkLeft: 0,
-    linkPadding: var(--layoutPad) calc(var(--layoutPad) * 2),
-    linkSize: 1.2rem,
+    linksDisplay: flex,
+    linksLeft: 0,
+    linkDisplay: inline-flex,
+    linkWidth: max-content,
   ),
-  $lgTablet_smLaptop: (
-    navbarHeight: calc(var(--linkSize) + var(--layoutPad)),
-    linkPadding: calc(var(--layoutPad) / 2) var(--layoutPad),
-  )
 );
