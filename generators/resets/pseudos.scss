@@ -27,9 +27,9 @@
     &::after {
       content: "";
       bottom: calc(100% + var(--before-border));
-      border-left: var(--before-border) solid transparent;
-      border-right: var(--before-border) solid transparent;
-      border-top: var(--before-border) solid var(--local-bg);
+      border-inline-start: var(--before-border) solid transparent;
+      border-inline-end: var(--before-border) solid transparent;
+      border-block-start: var(--before-border) solid var(--local-bg);
     }
     &:hover {
       &::before,

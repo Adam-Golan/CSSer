@@ -6,7 +6,7 @@
       [type="image"]
     ) {
     @include interface(0.4rem);
-    margin-bottom: 15px;
+    margin-block-end: 15px;
     border: 2px solid var(--color);
     background: transparent;
     user-select: text;
