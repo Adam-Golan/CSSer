@@ -36,26 +36,35 @@
   input[type="range"],
   input[type="radio"],
   input[type="checkbox"] {
-    accent-color: var(--bg);
-    &#switch {
-      --height: 24px;
+    margin: 0;
+    accent-color: var(--zima);
+    cursor: pointer;
+    &.switch {
+      // Responsive variables.
+      // Controls the height of the switch and slider.
+      --slideHeight: 24px;
+      // Controls the width of the slider.
+      --slideWidth: 50px;
+      // Controls the space between the switch and slider.
+      --space: 2px;
+      // -------------------------------------------------
+      --switchSize: calc(var(--slideHeight) - (var(--space) * 2));
       appearance: none;
-      width: 50px;
-      height: var(--height);
+      width: var(--slideWidth);
+      height: var(--slideHeight);
       position: relative;
       background: var(--disabled-d-5);
-      border-radius: var(--height);
+      border-radius: var(--slideHeight);
       cursor: pointer;
       transition: all 0.3s ease;
 
       &::before {
-        --size: calc(var(--height) - 4px);
         content: "";
         position: absolute;
-        height: var(--size);
-        width: var(--size);
-        top: 0;
-        left: 0;
+        height: var(--switchSize);
+        width: var(--switchSize);
+        top: var(--space);
+        left: var(--space);
         background: var(--disabled-l-5);
         border-radius: 50%;
         transition: transform 0.3s ease;
@@ -65,7 +74,7 @@
         background: var(--matrix-l-1);
 
         &::before {
-          transform: translateX(26px);
+          transform: translateX(calc(var(--slideWidth) - (var(--switchSize) + (var(--space) * 2))));
         }
       }
     }
