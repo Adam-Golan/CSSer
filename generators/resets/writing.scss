@@ -2,9 +2,8 @@
 
 @mixin writing {
   textarea,
-  input:not([type="button"]):not([type="submit"]):not([type="reset"]):not(
-      [type="image"]
-    ) {
+  select,
+  input:not([type="button"], [type="submit"], [type="reset"], input[type="radio"], input[type="range"], input[type="checkbox"]) {
     @include interface(0.4rem);
     margin-block-end: 15px;
     border: 2px solid var(--color);
@@ -16,6 +15,9 @@
     &::placeholder {
       color: #999;
       font-size: 0.9rem;
+    }
+    &.touched {
+      border-color: var(--danger-l-2);
     }
   }
 }
