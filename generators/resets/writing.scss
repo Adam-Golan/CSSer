@@ -3,9 +3,15 @@
 @mixin writing {
   textarea,
   select,
-  input:not([type="button"], [type="submit"], [type="reset"], input[type="radio"], input[type="range"], input[type="checkbox"]) {
+  input:not(
+      [type="button"],
+      [type="submit"],
+      [type="reset"],
+      input[type="radio"],
+      input[type="range"],
+      input[type="checkbox"]
+    ) {
     @include interface(0.4rem);
-    margin-block-end: 15px;
     border: 2px solid var(--color);
     background: transparent;
     user-select: text;
