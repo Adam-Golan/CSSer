@@ -66,7 +66,7 @@ body {
     &[data-type="page"] {
       width: 100%;
       height: 100%;
-      padding-block-start: var(--pageTopPad);
+      margin-block-start: var(--pageTopMargin);
       overflow-y: auto;
     }
     &[data-type="page"],

@@ -1,18 +1,20 @@
-@use '../medias.scss' as *;
+@use "../medias.scss" as *;
 
-$layout: ( // Merged.
-  $smMobile: (
-    pageTopPad: var(--navbarHeight),
-    layoutGap: 10px,
-    layoutPad: 50px,
-  ),
+$layout: (
+  // Merged.
+  $smMobile:
+    (
+      pageTopMargin: var(--navbarHeight),
+      layoutGap: 10px,
+      layoutPad: 50px,
+    ),
   $lgMobile_smTablet: (
-    pageTopPad: calc((1.2rem * 1.5) + 1.6rem),
+    pageTopMargin: calc(((1.2rem * 1.5) + 1.6rem) * 2),
     layoutGap: 15px,
     layoutPad: 15px,
   ),
   $lgTablet_smLaptop: (
     layoutGap: 20px,
     layoutPad: 20px,
-  ),
+  )
 );
