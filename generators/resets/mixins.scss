@@ -1,6 +1,6 @@
 @mixin interface($inlinePad) {
-    --inlinePad: #{$inlinePad};
-    padding: calc(var(--inlinePad) / 2) var(--inlinePad);
-    border-radius: var(--inlinePad);
+    padding: calc($inlinePad / 2) $inlinePad;
+    border-radius: $inlinePad;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
