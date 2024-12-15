@@ -67,7 +67,7 @@ body {
     &[data-type="page"] {
       width: 100%;
       height: 100%;
-      margin-block-start: var(--pageTopMargin);
+      margin-block: var(--pageTopMargin);
       overflow-y: auto;
     }
     &[data-type="page"],
