@@ -2,24 +2,24 @@
 
 $fluid: (
     $smMobile: (
-        fluidMaxHeight: 300px,
+        fluidBlockPad: 1rem,
     ),
     $mdMobile: (
-        fluidMaxHeight: 355px,
+        fluidBlockPad: 2rem,
     ),
     $lgMobile_smTablet: (
-        fluidMaxHeight: 460px,
+        fluidBlockPad: 3rem,
     ),
     $mdTablet: (
-        fluidMaxHeight: 580px,
+        fluidBlockPad: 4rem,
     ),
     $lgTablet_smLaptop: (
-        fluidMaxHeight: 980px,
+        fluidBlockPad: 14rem,
     ),
     $laptop_smDesktop: (
-        fluidMaxHeight: 1300px,
+        fluidBlockPad: 16rem,
     ),
     $lgDesktop_TV: (
-        fluidMaxHeight: 1850px,
+        fluidBlockPad: 20rem,
     ),
 );
