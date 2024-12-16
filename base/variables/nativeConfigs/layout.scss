@@ -4,12 +4,12 @@ $layout: (
   // Merged.
   $smMobile:
     (
-      pageTopMargin: var(--navbarHeight),
+      pageBlockPad: var(--navbarHeight),
       layoutGap: 10px,
       layoutPad: 50px,
     ),
   $lgMobile_smTablet: (
-    pageTopMargin: calc(((1.2rem * 1.5) + 1.6rem) * 2),
+    pageBlockPad: calc(((1.2rem * 1.5) + 1.6rem)),
     layoutGap: 15px,
     layoutPad: 15px,
   ),

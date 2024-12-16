@@ -37,8 +37,8 @@ body {
   font-family: $font;
   font-size: var(--fontSize);
   box-sizing: border-box;
-  @include accessibility;
   overflow: hidden;
+  @include accessibility;
 
   * {
     margin: 0;
@@ -67,7 +67,7 @@ body {
     &[data-type="page"] {
       width: 100%;
       height: 100%;
-      margin-block: var(--pageTopMargin);
+      padding-block: var(--pageBlockPad);
       overflow-y: auto;
     }
     &[data-type="page"],
