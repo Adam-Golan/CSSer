@@ -4,6 +4,7 @@
 @use "../base/functions/medias.scss" as *;
 
 @use "./resets/accessibility.scss" as *;
+@use "./resets/blocking.scss" as *;
 @use "./resets/clicking.scss" as *;
 @use "./resets/copying.scss" as *;
 @use "./resets/heading.scss" as *;
@@ -64,17 +65,7 @@ body {
     @include tabling;
     @include writing;
 
-    &[data-type="page"] {
-      width: 100%;
-      height: 100%;
-      padding-block-start: var(--pageBlockPad);
-      overflow-y: auto;
-    }
-    &[data-type="page"],
-    &[data-type="module"],
-    &[data-type="component"] {
-      display: block;
-    }
+    @include blocking;
 
     &::-webkit-scrollbar {
       width: 0.2rem;
