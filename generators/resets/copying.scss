@@ -32,3 +32,8 @@ blockquote {
 q {
   quotes: "“" "”";
 }
+
+.selectable {
+  user-select: text;
+  cursor: text;
+}
