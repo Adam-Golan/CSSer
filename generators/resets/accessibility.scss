@@ -9,6 +9,11 @@
     color: var(--HC-color);
     background: var(--HC-bg);
   }
+  &.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 
   * {
     &:focus {
