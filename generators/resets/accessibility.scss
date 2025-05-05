@@ -5,6 +5,16 @@
     --HC-bg: #f0f0f0;
   }
 
+  &.small {
+    --fontSize: 12px;
+  }
+  &.medium {
+    --fontSize: 16px;
+  }
+  &.large {
+    --fontSize: 22px;
+  }
+
   &.high-contrast * {
     color: var(--HC-color);
     background: var(--HC-bg);
