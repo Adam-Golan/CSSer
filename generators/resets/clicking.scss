@@ -15,7 +15,7 @@
     color: var(--bg);
     cursor: pointer;
     transition: all 0.2s ease;
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--bg);
       color: var(--color);
       scale: 1.05;
