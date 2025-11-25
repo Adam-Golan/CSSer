@@ -21,6 +21,8 @@ $customColors: (
   "ring": #e3b737, // LOTR
   "good": #6db966, // The Good Place
   "bad": #CB0600, // The Good Place
+  "modalBg": var(--bg),
+  "modalColor": var(--color),
 );
 
 // Font.
